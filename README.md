@@ -1,42 +1,54 @@
 # README
 
-Project
-project.com
+##Project
+ProjectWonder
 
-Install
-Clone the repository
-git clone git@github.com:juliendargelos/project.git
+##Install
+```
 cd project
 Check your Ruby version
 ruby -v
-The ouput should start with something like ruby 2.5.1
+```
+The output should start with something like
+
+```
+ruby 2.5.1
+```
 
 If not, install the right ruby version using rbenv (it could take a while):
-
+```
 rbenv install 2.5.1
-Install dependencies
-Using Bundler and Yarn:
+```
+## Install dependencies
+To install dependencies, we will need bundler and yarn:
 
+Using Bundler and Yarn:
+```
 bundle && yarn
-Set environment variables
+```
+To set environment variables
 Using Figaro:
 
 See config/application.yml.sample and contact the developer: contact@juliendargelos.com (sensitive data).
 
-Initialize the database
+## Initialize the database
+```
 rails db:create db:migrate db:seed
-Add heroku remotes
+```
+## Add heroku remotes
 Using Heroku CLI:
-
+```
 heroku git:remote -a project
 heroku git:remote --remote heroku-staging -a project-staging
 Serve
 rails s
-Deploy
+```
+## Deploy
 With Heroku pipeline (recommended)
 Push to Heroku staging remote:
-
+```
 git push heroku-staging
+```
 Go to the Heroku Dashboard and promote the app to production or use Heroku CLI:
 
 heroku pipelines:promote -a project-staging
